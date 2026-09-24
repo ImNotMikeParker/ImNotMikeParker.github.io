@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Michael Parker, full-stack .NET and Blazor software engineer in Murrysville, PA. Projects, experience, and resume.">
+  <title>Michael Parker</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Apply saved theme before first paint to avoid a flash.
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="#top">MP</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+      </ul>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <span class="sun" aria-hidden="true">☀</span><span class="moon" aria-hidden="true">☾</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <p class="eyebrow">Software Engineer · Full-Stack .NET &amp; Blazor</p>
+      <h1>Michael Parker</h1>
+      <p class="lede">
+        I build production .NET and Blazor systems, with a focus on secure third-party integrations,
+        scalable architecture, and dependable delivery from design through release.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="Michael_Parker_Resume.pdf" download>Download resume (PDF)</a>
+        <a class="btn" href="mailto:mjp5840@gmail.com">Email me</a>
+        <a class="btn" href="https://github.com/ImNotMikeParker" rel="me">GitHub</a>
+      </div>
+      <p class="meta">Murrysville, PA</p>
+    </section>
+
+    <section class="section" id="about">
+      <h2>About</h2>
+      <p>
+        Full-stack software engineer with 7+ years building production .NET and Blazor systems.
+        I run a fully agent-driven development workflow: Claude Code is the primary build loop,
+        with independent cross-model review before merge, raising throughput without relaxing the
+        quality bar.
+      </p>
+      <div class="grid-2">
+        <article class="card">
+          <h3>Agent-driven build loop</h3>
+          <p>Claude Code is the primary development workflow across production .NET and Blazor repositories. Planning, implementation, test coverage, and pull requests are executed through the agent rather than alongside it.</p>
+        </article>
+        <article class="card">
+          <h3>Custom agent tooling</h3>
+          <p>Subagents, skills, hooks, and repository-level conventions that encode architecture rules, coding standards, and review checklists, so agent output conforms to the codebase instead of requiring rework.</p>
+        </article>
+        <article class="card">
+          <h3>Cross-model adversarial review</h3>
+          <p>Codex acts as an independent reviewer of Claude-generated changes before merge, surfacing regressions, edge cases, and faulty assumptions that single-model self-review consistently misses.</p>
+        </article>
+        <article class="card">
+          <h3>MCP tool integration</h3>
+          <p>MCP servers and custom tooling wired into the agent loop give agents direct access to databases, APIs, and internal systems, so changes are made against real context rather than inference.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <h2>Projects</h2>
+      <p class="section-intro">Things I build outside of work.</p>
+      <div class="grid-2" id="project-list"></div>
+    </section>
+
+    <section class="section" id="experience">
+      <h2>Experience</h2>
+
+      <article class="job">
+        <header class="job-header">
+          <h3>Software Engineer</h3>
+          <p class="job-org">Matthews Aurora Funeral Solutions</p>
+          <p class="job-dates">Dec 2024 – Present</p>
+        </header>
+        <ul>
+          <li>Build and maintain production services, integrations, and UI on a large-scale Blazor and .NET platform, working across front-end, back-end, and data layers to carry features from design through release.</li>
+          <li>Led the implementation of secure OAuth 2.0 integrations with QuickBooks and PayPal, automating synchronization of invoices, payments, and financial records that previously depended on manual reconciliation.</li>
+          <li>Design and harden REST APIs and Entity Framework Core data access so integrations degrade gracefully under third-party outages, token expiration, and partial failures rather than corrupting financial state.</li>
+          <li>Deliver features through an agentic workflow built on Claude Code, with Codex performing adversarial review ahead of merge, sustaining higher feature throughput while keeping human review focused on architecture and risk.</li>
+          <li>Collaborate across multiple project teams to improve system reliability, maintainability, and deployment workflows, contributing to code review and shared engineering standards.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <header class="job-header">
+          <h3>Application Development Specialist</h3>
+          <p class="job-org">True Helix</p>
+          <p class="job-dates">Oct 2021 – Dec 2024</p>
+        </header>
+        <ul>
+          <li>Built a client scheduling, employee tracking, and payroll web application in Blazor and .NET/C#, owning features from requirements through production support.</li>
+          <li>Expanded onto the mobile team to deliver shift management features in a Xamarin.Forms application, and integrated React components to improve functionality and user experience across web and mobile.</li>
+          <li>Implemented caregiver scheduling logic that reduced manual coordination for operations staff.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <header class="job-header">
+          <h3>Software Engineer</h3>
+          <p class="job-org">Westmoreland Mechanical Testing and Research</p>
+          <p class="job-dates">Mar 2019 – Oct 2021</p>
+        </header>
+        <ul>
+          <li>Migrated 125 legacy programs from Visual Basic 3/4 to Visual Basic 6 and built internal testing tools, including a CRUD application for furnace test management, improving system stability and streamlining lab data handling.</li>
+          <li>Led recovery efforts during two data breach incidents, coordinating with IT to restore data integrity and establish more robust backup and recovery protocols.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section" id="skills">
+      <h2>Skills</h2>
+      <dl class="skills">
+        <div><dt>Languages &amp; Data</dt><dd>C#, TypeScript, SQL, Visual Basic, SQL Server, Entity Framework Core, LINQ</dd></div>
+        <div><dt>Web &amp; Frameworks</dt><dd>Blazor, .NET / .NET Core, REST APIs, React, Xamarin.Forms</dd></div>
+        <div><dt>Integrations &amp; Auth</dt><dd>OAuth 2.0, QuickBooks API, PayPal API</dd></div>
+        <div><dt>Agentic &amp; AI Tooling</dt><dd>Claude Code, Codex, MCP servers, custom subagents / skills / hooks, context engineering</dd></div>
+        <div><dt>Tools &amp; Practices</dt><dd>Git, code review, CI and deployment workflows</dd></div>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Michael Parker · <a href="mailto:mjp5840@gmail.com">mjp5840@gmail.com</a> · <a href="Michael_Parker_Resume.pdf" download>Resume PDF</a></p>
+  </footer>
+
+  <script src="projects.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    var toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('click', function () {
+      var root = document.documentElement;
+      var current = root.getAttribute('data-theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var isDark = current ? current === 'dark' : prefersDark;
+      var next = isDark ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+  </script>
+</body>
+</html>
