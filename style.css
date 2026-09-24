@@ -232,8 +232,7 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 16px; }
   display: grid; place-items: center;
   padding: 0 0 2px;
 }
-.carousel-btn:hover:not(:disabled) { border-color: var(--accent); }
-.carousel-btn:disabled { opacity: 0.35; cursor: default; }
+.carousel-btn:hover { border-color: var(--accent); }
 
 /* ---------- Projects ---------- */
 .project {

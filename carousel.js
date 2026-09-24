@@ -1,6 +1,6 @@
 // Turns any [data-carousel] container into a horizontal, snap-scrolling
-// carousel with previous/next buttons, but only when it holds more than
-// MAX_GRID_ITEMS children. Smaller sets stay as a plain grid.
+// carousel with looping previous/next buttons, but only when it holds more
+// than MAX_GRID_ITEMS children. Smaller sets stay as a plain grid.
 (function () {
   var MAX_GRID_ITEMS = 3;
 
@@ -40,26 +40,24 @@
       return first.getBoundingClientRect().width + gap;
     }
 
-    function update() {
-      var max = track.scrollWidth - track.clientWidth;
-      prev.disabled = track.scrollLeft <= 1;
-      next.disabled = track.scrollLeft >= max - 1;
+    function maxScroll() {
+      return track.scrollWidth - track.clientWidth;
     }
 
+    // Snap positions sit inside the track's padding, so allow that much slack
+    // when deciding whether we're at either end.
+    function slack() {
+      return (parseFloat(getComputedStyle(track).paddingLeft) || 0) + 1;
+    }
+
+    // Loops: stepping past either end wraps around to the other.
     prev.addEventListener("click", function () {
-      track.scrollBy({ left: -step(), behavior: "smooth" });
+      var atStart = track.scrollLeft <= slack();
+      track.scrollTo({ left: atStart ? maxScroll() : track.scrollLeft - step(), behavior: "smooth" });
     });
     next.addEventListener("click", function () {
-      track.scrollBy({ left: step(), behavior: "smooth" });
+      var atEnd = track.scrollLeft >= maxScroll() - slack();
+      track.scrollTo({ left: atEnd ? 0 : track.scrollLeft + step(), behavior: "smooth" });
     });
-
-    var pending = false;
-    track.addEventListener("scroll", function () {
-      if (pending) return;
-      pending = true;
-      requestAnimationFrame(function () { pending = false; update(); });
-    });
-    window.addEventListener("resize", update);
-    update();
   });
 })();
