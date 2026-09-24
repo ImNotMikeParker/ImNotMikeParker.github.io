@@ -1,6 +1,7 @@
 // Personal projects shown on the Projects section.
 // Add, remove, or reorder entries here. Each entry:
 //   name        - display name
+//   icon        - path to a square icon image (optional)
 //   description - one or two sentences
 //   tags        - short tech labels
 //   repo        - GitHub URL (optional; leave empty while the repo is private)
@@ -8,6 +9,7 @@
 const projects = [
   {
     name: "Simply Spotify",
+    icon: "img/simply-spotify.png",
     description:
       "A Spotify plugin for Elgato Stream Deck and Stream Deck +, built on Elgato's official Node.js SDK. " +
       "Live album art with a progress bar on every key, a Like button that checks your library on each track change, " +
@@ -20,6 +22,7 @@ const projects = [
   },
   {
     name: "StashLog",
+    icon: "img/stashlog.png",
     description:
       "A personal cannabis product journal, installable as a progressive web app. Scan a package QR code, " +
       "paste a dispensary link, or photograph the label, and the Claude API extracts strain, brand, potency, " +
@@ -40,9 +43,22 @@ const projects = [
     var card = document.createElement("article");
     card.className = "card project";
 
+    var head = document.createElement("div");
+    head.className = "project-head";
+    if (p.icon) {
+      var img = document.createElement("img");
+      img.className = "project-icon";
+      img.src = p.icon;
+      img.alt = "";
+      img.width = 44;
+      img.height = 44;
+      img.loading = "lazy";
+      head.appendChild(img);
+    }
     var h3 = document.createElement("h3");
     h3.textContent = p.name;
-    card.appendChild(h3);
+    head.appendChild(h3);
+    card.appendChild(head);
 
     if (p.tags && p.tags.length) {
       var tags = document.createElement("ul");

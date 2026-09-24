@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Michael Parker, full-stack .NET and Blazor software engineer in Murrysville, PA. Projects, experience, and resume.">
   <title>Michael Parker</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://imnotmikeparker.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Michael Parker · Software Engineer">
+  <meta property="og:description" content="Full-stack .NET and Blazor engineer. Projects, experience, and resume.">
+  <meta property="og:url" content="https://imnotmikeparker.github.io/">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111214" media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="style.css">
   <script>
     // Apply saved theme before first paint to avoid a flash.
@@ -56,7 +65,7 @@
         with independent cross-model review before merge, raising throughput without relaxing the
         quality bar.
       </p>
-      <div class="grid-2">
+      <div class="grid-2" data-carousel="How I work">
         <article class="card">
           <h3>Agent-driven build loop</h3>
           <p>Claude Code is the primary development workflow across production .NET and Blazor repositories. Planning, implementation, test coverage, and pull requests are executed through the agent rather than alongside it.</p>
@@ -79,7 +88,7 @@
     <section class="section" id="projects">
       <h2>Projects</h2>
       <p class="section-intro">Side projects, shipped and maintained.</p>
-      <div class="grid-2" id="project-list"></div>
+      <div class="grid-2" id="project-list" data-carousel="Projects"></div>
     </section>
 
     <section class="section" id="experience">
@@ -139,10 +148,11 @@
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Michael Parker · <a href="mailto:mjp5840@gmail.com">mjp5840@gmail.com</a> · <a href="Michael_Parker_Resume.pdf" download>Resume PDF</a></p>
+    <p>© <span id="year"></span> Michael Parker · <a href="mailto:mjp5840@gmail.com">mjp5840@gmail.com</a> · <a href="https://github.com/ImNotMikeParker" rel="me">GitHub</a> · <a href="Michael_Parker_Resume.pdf" download>Resume PDF</a></p>
   </footer>
 
   <script src="projects.js"></script>
+  <script src="carousel.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
