@@ -32,5 +32,5 @@ For a custom domain, add a `CNAME` file containing the domain and point DNS at G
 
 ## Before publishing
 
-- Add a `repo` URL to the StashLog entry in `projects.js` if the repo goes public.
+- Add a Source link to the StashLog entry in `projects.js` if the repo goes public.
 - Decide whether to add a phone number. It is intentionally left off the public page.

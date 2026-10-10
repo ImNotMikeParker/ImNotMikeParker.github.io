@@ -4,8 +4,7 @@
 //   icon        - path to a square icon image (optional)
 //   description - one or two sentences
 //   tags        - short tech labels
-//   repo        - GitHub URL (optional; leave empty while the repo is private)
-//   demo        - live URL (optional)
+//   links       - list of { label, href } shown at the bottom of the card
 const projects = [
   {
     name: "Simply Spotify",
@@ -17,8 +16,10 @@ const projects = [
       "on Windows it watches the Spotify window title and only calls the API when something changed, cutting usage " +
       "from roughly 900 calls an hour to 60. PKCE sign-in with no client secret; nothing leaves your machine but calls to Spotify.",
     tags: ["TypeScript", "Node.js", "Stream Deck SDK", "Spotify Web API", "OAuth PKCE"],
-    repo: "https://github.com/ImNotMikeParker/spotify-streamdeck",
-    demo: ""
+    links: [
+      { label: "Elgato Marketplace", href: "https://marketplace.elgato.com/product/simply-spotify-b6f6cf53-5229-4040-afc2-c1d604b0df9b" },
+      { label: "Source", href: "https://github.com/ImNotMikeParker/spotify-streamdeck" }
+    ]
   },
   {
     name: "StashLog",
@@ -30,8 +31,9 @@ const projects = [
       "Passwordless Supabase auth, Vercel serverless functions, push notifications, and a Vitest suite gated by CI. " +
       "Built end to end through the Claude Code workflow described above.",
     tags: ["React", "Vite", "Supabase", "Vercel", "Claude API", "PWA"],
-    repo: "",
-    demo: "https://stashlog-ten.vercel.app"
+    links: [
+      { label: "stashlog.com", href: "https://stashlog.com" }
+    ]
   }
 ];
 
@@ -75,19 +77,14 @@ const projects = [
     desc.textContent = p.description;
     card.appendChild(desc);
 
-    if (p.repo || p.demo) {
+    if (p.links && p.links.length) {
       var links = document.createElement("div");
       links.className = "links";
-      if (p.repo) {
-        var r = document.createElement("a");
-        r.href = p.repo; r.textContent = "Source"; r.rel = "noopener"; r.target = "_blank";
-        links.appendChild(r);
-      }
-      if (p.demo) {
-        var d = document.createElement("a");
-        d.href = p.demo; d.textContent = "Live app"; d.rel = "noopener"; d.target = "_blank";
-        links.appendChild(d);
-      }
+      p.links.forEach(function (l) {
+        var a = document.createElement("a");
+        a.href = l.href; a.textContent = l.label; a.rel = "noopener"; a.target = "_blank";
+        links.appendChild(a);
+      });
       card.appendChild(links);
     }
 
