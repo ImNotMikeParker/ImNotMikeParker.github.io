@@ -45,7 +45,7 @@ const projects = [
     icon: "img/simply-voicemeeter.png",
     summary:
       "Live Voicemeeter control for Stream Deck, replacing a plugin I used daily. Mute keys with level meters, " +
-      "one-tap output device swapping that shows which device is actually live, and dials with a colour-picked gain bar.",
+      "one-tap output device swapping that shows which device is actually live, and dials with a color-picked gain bar.",
     details:
       "Calls VB-Audio's native Remote DLL straight from Node through a Node-API FFI binding, no helper process. " +
       "Every dropdown is filled from Voicemeeter's own strip labels and device list, so you pick VOICE, not Strip 0. " +
