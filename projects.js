@@ -20,7 +20,7 @@ const projects = [
       "nothing leaves your machine but calls to Spotify.",
     tags: ["TypeScript", "Stream Deck SDK", "Spotify Web API", "OAuth PKCE"],
     links: [
-      { label: "Elgato Marketplace", href: "https://marketplace.elgato.com/product/simply-spotify-b6f6cf53-5229-4040-afc2-c1d604b0df9b" },
+      { label: "Marketplace", href: "https://marketplace.elgato.com/product/simply-spotify-b6f6cf53-5229-4040-afc2-c1d604b0df9b" },
       { label: "Source", href: "https://github.com/ImNotMikeParker/spotify-streamdeck" }
     ]
   },

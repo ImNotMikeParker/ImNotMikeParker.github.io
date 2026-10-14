@@ -261,11 +261,21 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 16px; }
   border-radius: 999px;
   padding: 2px 9px;
 }
-.project .links { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 14px; font-size: 0.95rem; }
+.project .links {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+.project .links a { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
 .project .links a::after { content: " \2197"; font-size: 0.8em; opacity: 0.7; }
 .project .details { margin-top: 0.25rem; }
 .project .more {
   margin-left: auto;
+  flex: 0 0 auto;
   background: none;
   border: 0;
   padding: 0;
