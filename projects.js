@@ -43,13 +43,15 @@ const projects = [
   {
     name: "Simply Voicemeeter",
     icon: "img/simply-voicemeeter.png",
-    description:
-      "Live Voicemeeter control for Elgato Stream Deck, replacing a plugin I used daily. Calls VB-Audio's native Remote " +
-      "DLL straight from Node through a Node-API FFI binding, no helper process. Mute and gain keys carry live level meters, " +
-      "a bus can swap between two output devices with the active one read back from Voicemeeter rather than remembered, and " +
-      "every dropdown is filled from Voicemeeter's own strip labels and device list. Polls the API's change flag at 10 Hz and " +
-      "meters at 20 fps only while one is on screen. Stream Deck + dial with a color-picked gain bar and a complementary hot zone above 0 dB.",
-    tags: ["TypeScript", "Node.js", "Stream Deck SDK", "FFI", "Voicemeeter Remote API"],
+    summary:
+      "Live Voicemeeter control for Stream Deck, replacing a plugin I used daily. Mute keys with level meters, " +
+      "one-tap output device swapping that shows which device is actually live, and dials with a colour-picked gain bar.",
+    details:
+      "Calls VB-Audio's native Remote DLL straight from Node through a Node-API FFI binding, no helper process. " +
+      "Every dropdown is filled from Voicemeeter's own strip labels and device list, so you pick VOICE, not Strip 0. " +
+      "Polls the API's change flag at 10 Hz and meters at 20 fps only while one is on screen. Scripts use Voicemeeter's " +
+      "own syntax with press, hold, toggle and push-to-talk modes and live state from any parameter.",
+    tags: ["TypeScript", "Stream Deck SDK", "FFI", "Voicemeeter Remote API"],
     links: [
       { label: "Source", href: "https://github.com/ImNotMikeParker/simply-voicemeeter" }
     ]
