@@ -22,6 +22,21 @@ const projects = [
     ]
   },
   {
+    name: "Simply Peak",
+    icon: "img/simply-peak.png",
+    description:
+      "Controls a Puffco Peak Pro from an Elgato Stream Deck over Bluetooth LE, with no official API to lean on. " +
+      "Re-implements the device's Lorax protocol in TypeScript from community reverse-engineering: a sequence-matched " +
+      "command channel, a SHA-256 unlock handshake, typed reads and writes over the device's virtual file paths, and a " +
+      "CBOR decoder for profile colours. Profile keys show live temperature and colour, Start is hold-to-start by design, " +
+      "and on the Stream Deck + one action spans all four dials as a single bar that fills while the chamber heats and " +
+      "drains through the session. Native Bluetooth via a prebuilt Node-API binding, with pairing handled through WinRT.",
+    tags: ["TypeScript", "Node.js", "Stream Deck SDK", "Bluetooth LE", "Reverse engineering"],
+    links: [
+      { label: "Source", href: "https://github.com/ImNotMikeParker/simply-peak" }
+    ]
+  },
+  {
     name: "StashLog",
     icon: "img/stashlog.png",
     description:
