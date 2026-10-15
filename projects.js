@@ -68,9 +68,8 @@ const projects = [
       "Monitors are listed by their EDID names, and Windows' display-power notifications count as rests for the " +
       "screen-time key. A fourth key flips taskbar auto-hide. Everything runs locally.",
     tags: ["TypeScript", "Stream Deck SDK", "Win32", "FFI"],
-    links: [
-      { label: "Source", href: "https://github.com/ImNotMikeParker/simply-oled" }
-    ]
+    // Source is private while the plugin is sold; add the Marketplace link once the listing is live.
+    links: []
   },
   {
     name: "StashLog",
