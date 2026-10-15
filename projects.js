@@ -57,6 +57,22 @@ const projects = [
     ]
   },
   {
+    name: "Simply OLED",
+    icon: "img/simply-oled.png",
+    summary:
+      "Burn-in care for OLED monitors on Stream Deck. Black out one screen while you game on another, run a " +
+      "non-strobing pixel wash, and see how long each monitor has been lit since its last rest.",
+    details:
+      "The overlays are plain Win32 windows created from the plugin's Node process through FFI, with a registered " +
+      "window procedure and a main-thread message pump, so they never steal focus and vanish if the plugin dies. " +
+      "Monitors are listed by their EDID names, and Windows' display-power notifications count as rests for the " +
+      "screen-time key. A fourth key flips taskbar auto-hide. Everything runs locally.",
+    tags: ["TypeScript", "Stream Deck SDK", "Win32", "FFI"],
+    links: [
+      { label: "Source", href: "https://github.com/ImNotMikeParker/simply-oled" }
+    ]
+  },
+  {
     name: "StashLog",
     icon: "img/stashlog.png",
     summary:
