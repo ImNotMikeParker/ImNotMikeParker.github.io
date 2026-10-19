@@ -53,6 +53,7 @@ const projects = [
       "own syntax with press, hold, toggle and push-to-talk modes and live state from any parameter.",
     tags: ["TypeScript", "Stream Deck SDK", "FFI", "Voicemeeter Remote API"],
     links: [
+      { label: "Marketplace", href: "https://marketplace.elgato.com/product/simply-voicemeeter-cee10445-4b7e-4e48-89ec-dd64e8161f25" },
       { label: "Source", href: "https://github.com/ImNotMikeParker/simply-voicemeeter" }
     ]
   },
@@ -68,8 +69,10 @@ const projects = [
       "Monitors are listed by their EDID names, and Windows' display-power notifications count as rests for the " +
       "screen-time key. A fourth key flips taskbar auto-hide. Everything runs locally.",
     tags: ["TypeScript", "Stream Deck SDK", "Win32", "FFI"],
-    // Source is private while the plugin is sold; add the Marketplace link once the listing is live.
-    links: []
+    // Source stays private while the plugin is sold.
+    links: [
+      { label: "Marketplace", href: "https://marketplace.elgato.com/product/simply-oled-5c124904-78eb-4c39-8de4-f960db01b46a" }
+    ]
   },
   {
     name: "StashLog",
