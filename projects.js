@@ -75,6 +75,21 @@ const projects = [
     ]
   },
   {
+    name: "Simply Clip It",
+    icon: "img/simply-clip-it.png",
+    summary:
+      "One-press instant replay for Stream Deck. A light background buffer saves the last 15 seconds to 5 minutes " +
+      "of any monitor or app as an MP4 in about a second, with the game's own audio. Ships as a paid version and a free 720p Lite.",
+    details:
+      "Drives a bundled FFmpeg with Desktop Duplication capture straight into the GPU encoder. Benchmarked mid-match, it " +
+      "held 1440p at 120 fps where Windows Graphics Capture dropped to about 93. Per-app audio comes from WASAPI process " +
+      "loopback through FFI, placed by the driver's capture timestamps so A/V sync stays within about 10 ms, and every clip " +
+      "is leveled to -14 LUFS without re-encoding the video. One codebase builds both Marketplace editions.",
+    tags: ["TypeScript", "Stream Deck SDK", "FFmpeg", "WASAPI"],
+    // Source stays private while the plugin is sold; Marketplace link goes here once the listing is live.
+    links: []
+  },
+  {
     name: "StashLog",
     icon: "img/stashlog.png",
     summary:
